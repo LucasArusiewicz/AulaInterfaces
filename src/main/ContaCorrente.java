@@ -5,6 +5,11 @@ public class ContaCorrente implements Conta {
 	private double saldo;
 	private double taxaOperacao = 0.5;
 	private Cliente donoConta;
+	
+	public ContaCorrente () {
+		
+		Principal.listaConta.add(this);
+	}
 
 	@Override
 	public void depositar(double valor) {		
@@ -28,6 +33,12 @@ public class ContaCorrente implements Conta {
 	public void setDonoConta(Cliente donoConta) {
 		this.donoConta = donoConta;
 	}
+
+	@Override
+	public String toString() {
+		return "ContaCorrente [saldo=" + saldo + ", donoConta=" + donoConta + "]";
+	}
+	
 	
 
 }

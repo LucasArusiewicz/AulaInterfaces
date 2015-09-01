@@ -1,6 +1,10 @@
 package main;
 
 public class ContaPoupanca implements Conta {
+	
+	public ContaPoupanca (){
+		
+	}
 
 	private double saldo;
 
@@ -20,5 +24,12 @@ public class ContaPoupanca implements Conta {
 	public double getSaldo() {
 		return this.saldo;
 	}
+
+	@Override
+	public String toString() {
+		return "ContaPoupanca [saldo=" + saldo + "]";
+	}
+	
+	
 
 }
